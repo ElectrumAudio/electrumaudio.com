@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="/apps/web/assets/logo-2022.11.17-001.png">
+    <img width="200" src="/apps/web/assets/logo-2022.11.17-001.png">
 </p>
 
 # Electrum Audio
