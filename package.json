@@ -1,5 +1,6 @@
 {
-    "name": "electrum-audio.com",
+    "name": "electrumaudio.com",
+    "version": "v0.1.0",
     "private": true,
     "author": "Rafe Thompson <blasteratmyside@gmail.com>"
 }
