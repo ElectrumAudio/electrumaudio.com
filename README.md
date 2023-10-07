@@ -4,7 +4,7 @@
 
 # Electrum Audio
 
-> **electrum-audio.com site repo**
+> **electrumaudio.com site repo**
 
 Carpe diem.
 
