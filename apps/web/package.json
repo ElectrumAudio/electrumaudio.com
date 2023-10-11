@@ -1,4 +1,13 @@
 {
     "name": "electrumaudio.com-web",
-    "private": true
+    "private": true,
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro start",
+        "build": "astro build",
+        "preview": "astro preview"
+    },
+    "dependencies": {
+        "astro": "^3.2.4"
+    }
 }
