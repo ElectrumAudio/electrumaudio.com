@@ -1,0 +1,8 @@
+---
+import ProductsLayout from '../../layout/ProductsLayout.astro';
+import * as product from '../../products/spock-transformer.md';
+const pageTitle = "Electrum Audio | Products | " + product.frontmatter.title;
+---
+<ProductsLayout title={pageTitle}>
+    <product.Content />
+</ProductsLayout>
