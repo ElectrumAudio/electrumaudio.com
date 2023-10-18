@@ -1,7 +1,40 @@
 ---
+import { Image } from 'astro:assets';
+import emblemSage from "../assets/emblem-sage-broken-01.svg";
 ---
-    <header>
-        <nav>
-            <p>Electrum Audio</p>
-        </nav>
-    </header>
+<header>
+    <Image src={emblemSage} alt="The Electrum Audio emblem, with an epsilon and alpha character" />
+    <p id="company-tagline">artisanal audiophile components</p>
+</header>
+<style>
+    header {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(var(--dark), rgb(75,75,75));
+    box-shadow: 0 10px 10px rgba(0,0,0,0.9);
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--umber);
+    z-index: 99;
+}
+
+    header img {
+        max-height: 75px;
+    }
+
+    header p {
+        color: white;
+    }
+
+    p#company-tagline {
+        height: 1.6rem;
+        font-weight: bold;
+        font-style: italic;
+        margin: 0;
+        padding: 0;
+        margin-right: 2rem;
+    }
+</style>

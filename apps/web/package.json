@@ -1,5 +1,5 @@
 {
-    "name": "electrumaudio.com-web",
+    "name": "electrum-web",
     "private": true,
     "scripts": {
         "dev": "astro dev",
@@ -8,6 +8,7 @@
         "preview": "astro preview"
     },
     "dependencies": {
-        "astro": "^3.2.4"
+        "astro": "^3.3.1",
+        "electrum-storefront": "workspace:^"
     }
 }

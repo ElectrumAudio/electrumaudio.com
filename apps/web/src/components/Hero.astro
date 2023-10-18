@@ -1,0 +1,41 @@
+---
+import { Picture, Image } from 'astro:assets';
+// import heroBackdrop from '../assets/hero-backdrop-001.png';
+import transformer from '../assets/transformer-4-001.png';
+import logoWhite from '../assets/logo-centered-white-smudge-01.svg';
+---
+<section id="hero">
+    <Image src={logoWhite} id="hero-logo" alt="The Electrum Audio stylized logo" />
+    <Picture src={transformer} id="hero-transformer" formats={['avif', 'webp']} alt="Image of an Electrum Audio power transformer" pictureAttributes={{style: "grid-column: 1; grid-row: 1;"}} />
+</section>
+<style>
+    section#hero {
+        background: var(--dark) right center / cover no-repeat url('../assets/hero-backdrop-001-600.webp');
+        height: 45vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 45vh;
+        align-items: center;
+        border-bottom: 2px solid var(--umber);
+        box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+        position: relative;
+        z-index: 98;
+    }
+    #hero-logo {
+        width: 66%;
+        margin-left: 20%;
+        height: auto;
+        object-fit: contain;
+        grid-column: 2;
+        grid-row: 1;
+        display: inline-block;
+        position: relative;
+    }
+    #hero-transformer {
+        width: auto;
+        height: 40vh;
+        object-fit: contain;
+        filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.75));
+    }
+</style>

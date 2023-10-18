@@ -1,45 +1,32 @@
 @import url("reset.css");
 
+/* COLOURS */
+:root {
+    --sand: rgb(231,182,147);
+    --sage: rgb(126,139,101);
+    --copper: rgb(196,120,43);
+    --sky: rgb(122,162,213);
+    --crimson: rgb(117,14,10);
+    --clay: rgb(235,104,93);
+    --umber: rgb(190,17,9);
+    --dark: rgb(34,28,24);
+}
+
 h1, h2, h3, h4, h5, h6, p {
-    font-family: "Montserrat", sans-serif;
+    font-family: sans-serif;
     color: rgb(40,40,40);
 }
 
 html {
     min-height: 100vh;
-    /* background-color: antiquewhite; */
-    /* background-image: linear-gradient( rgb(200,200,210), white); */
+    min-width: 100vw;
 }
 
 body {
     min-height: 100vh;
     width: 100%;
+    overflow-x: hidden;
     background-image: linear-gradient(90deg, white, white 66%, antiquewhite);
-}
-
-nav {
-    width: 100%;
-    padding: 1rem;
-    background-color: rgb(50,50,50);
-    box-shadow: 0 20px 20px rgba(50,50,50,0.3);
-    position: sticky;
-    top: 0;
-}
-
-nav p {
-    color: white;
-}
-
-/* body > header {
-    padding: 2rem 2rem 4rem;
-    max-width: 1600px;
-    margin: 0 auto;
-} */
-
-#main-logo {
-    display: block;
-    max-width: 750px;
-    margin: 0 auto;
 }
 
 #illustrations {
@@ -47,7 +34,6 @@ nav p {
     align-content: center;
     display: flex;
     flex-wrap: wrap;
-    /* gap: 1rem; */
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 15vw;
@@ -84,8 +70,8 @@ section#tagline p {
 }
 
 main#ad-copy {
-    padding: 4rem 20vw;
-    background-color: white;
+    padding: 4rem 20vw 4rem 40vw;
+    background: white left top / contain no-repeat url("../assets/soldiers-sidebar.png");
 }
 
 main#ad-copy p {
@@ -100,15 +86,4 @@ main#ad-copy p:first-child::first-letter {
     margin-right: 1ch;
     float: left;
     padding: 0.8rem 0 0;
-}
-
-footer {
-    background-color: rgb(50,50,50);
-    width: 100%;
-    padding: 3rem;
-}
-
-footer p {
-    font-size: 0.7rem;
-    color: white;
 }
