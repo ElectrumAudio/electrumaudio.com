@@ -1,5 +1,5 @@
 ---
-layout: ../templates/ImageBanner.astro
+layout: ../templates/Banner.astro
 title: Battle Tested
 image: [kirk-and-spock-01.jpg, Kirk and Spock in the field]
 position: left
