@@ -1,0 +1,43 @@
+---
+---
+<div class="text-block">
+    <slot />
+</div>
+<style is:global>
+    main > .text-block {
+        padding: 4rem 20vw 4rem 25vw;
+    }
+
+    main > .text-block p {
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+        text-align: justify;
+        margin: 1.3rem 0 0;
+    }
+
+    main > .text-block p:first-child::first-letter {
+        font-size: 2.6rem;
+        margin-right: 1ch;
+        float: left;
+        padding: 0.8rem 0 0;
+    }
+
+    main > .text-block ul {
+        margin-top: 1.3rem;
+        list-style: inside square;
+    }
+
+    main > .text-block li {
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+    }
+
+    main > .text-block img {
+        width: 85%;
+        height: auto;
+        display: block;
+        margin: 1.3rem auto;
+        border-bottom-right-radius: 1.3rem;
+        box-shadow: 4px 4px 4px rgba(75,75,75,0.3);
+    }
+</style>

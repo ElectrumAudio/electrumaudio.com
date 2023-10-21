@@ -3,6 +3,7 @@ import Head from '../components/Head.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Hero from '../components/Hero.astro';
+const pieces = await Astro.glob('../homepage/*.md');
 import "../styles/styles.css";
 ---
 <!DOCTYPE html>
@@ -11,9 +12,12 @@ import "../styles/styles.css";
 <body>
     <Header />
     <Hero />
-    <main id="ad-copy">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis urna cursus eget nunc scelerisque. Tortor at auctor urna nunc. Purus non enim praesent elementum. Nibh ipsum consequat nisl vel pretium lectus quam. Malesuada bibendum arcu vitae elementum curabitur vitae nunc. Id leo in vitae turpis. Id diam vel quam elementum pulvinar etiam non quam. Consequat semper viverra nam libero. Vivamus at augue eget arcu. A arcu cursus vitae congue mauris rhoncus aenean. Tellus rutrum tellus pellentesque eu tincidunt. Tincidunt ornare massa eget egestas purus viverra accumsan. Tincidunt augue interdum velit euismod in pellentesque massa. Quisque sagittis purus sit amet volutpat consequat. Lectus nulla at volutpat diam ut venenatis. Sit amet aliquam id diam maecenas ultricies. Nunc faucibus a pellentesque sit amet porttitor eget dolor morbi. Ut consequat semper viverra nam libero justo laoreet sit amet. Non quam lacus suspendisse faucibus interdum posuere lorem.</p>
+    <main id="primary-content">
+        {pieces.map(piece => (
+            <piece.Content />
+        ))}
     </main>
     <Footer />
 </body>
 </html>
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis urna cursus eget nunc scelerisque. Tortor at auctor urna nunc. Purus non enim praesent elementum. Nibh ipsum consequat nisl vel pretium lectus quam. Malesuada bibendum arcu vitae elementum curabitur vitae nunc. Id leo in vitae turpis. Id diam vel quam elementum pulvinar etiam non quam. Consequat semper viverra nam libero. Vivamus at augue eget arcu. A arcu cursus vitae congue mauris rhoncus aenean. Tellus rutrum tellus pellentesque eu tincidunt. Tincidunt ornare massa eget egestas purus viverra accumsan. Tincidunt augue interdum velit euismod in pellentesque massa. Quisque sagittis purus sit amet volutpat consequat. Lectus nulla at volutpat diam ut venenatis. Sit amet aliquam id diam maecenas ultricies. Nunc faucibus a pellentesque sit amet porttitor eget dolor morbi. Ut consequat semper viverra nam libero justo laoreet sit amet. Non quam lacus suspendisse faucibus interdum posuere lorem.</p> -->

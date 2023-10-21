@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets';
+const { frontmatter } = Astro.props;
+let position = frontmatter.position || "left";
+const imageColumn = (position === "left") ? 1 : 2;
+const textColumn = (position === "left") ? 2 : 1
+let bannerImage;
+if (frontmatter.image) {
+    bannerImage = import(`../assets/${frontmatter.image[0]}`);
+    await bannerImage;
+}
+---
+<div class="image-banner">
+    {frontmatter.title &&
+        <h2>{frontmatter.title}</h2>
+    }
+    {bannerImage &&
+        <Image src={bannerImage} alt={frontmatter.image[1]} /> 
+    }
+    <div class="banner-text">
+        <slot />
+    </div>
+</div>
+    <style is:global define:vars={{position, imageColumn, textColumn}}>
+        main > .image-banner {
+            width: 100%;
+            padding: 2rem 2vw;
+            margin: 0 0 2rem;
+            background: linear-gradient(rgba(0,0,0,0.9), rgba(75,75,75,0.9));
+            display: grid;
+            grid-template-rows: minmax(2rem, auto) minmax(2rem, auto);
+            grid-template-columns: 1fr 1fr;
+        }
+
+        main > .image-banner h2 {
+            font-size: 2rem;
+            color: var(--clay);
+            margin-bottom: 0.5rem;
+            grid-column: var(--textColumn);
+            grid-row: 1;
+            /* align-self: end; */
+        }
+
+        main > .image-banner > .banner-text {
+            grid-column: var(--textColumn);
+            grid-row: 2;
+            /* align-self: start; */
+        }
+
+        main > .image-banner p {
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            color: white;
+            text-align: var(--position);
+        }
+        main > .image-banner img {
+            margin: 1rem;
+            height: auto;
+            width: 30vw;
+            object-fit: contain;
+            grid-column: var(--imageColumn);
+            grid-row: 1 / 3;
+        }
+    </style>

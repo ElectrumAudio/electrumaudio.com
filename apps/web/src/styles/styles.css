@@ -12,9 +12,9 @@
     --dark: rgb(34,28,24);
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, li {
     font-family: sans-serif;
-    color: rgb(40,40,40);
+    color: var(--dark);
 }
 
 html {
@@ -29,61 +29,7 @@ body {
     background-image: linear-gradient(90deg, white, white 66%, antiquewhite);
 }
 
-#illustrations {
-    justify-content: center;
-    align-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 0 15vw;
-    box-sizing: border-box;
-}
-
-#illustrations img {
-    display: block;
-    box-sizing: border-box;
-    width: 20%;
-    padding: 0;
-    margin: 0;
-    flex-basis: auto;
-    object-fit: contain;
-    max-height: 125px;
-}
-
-#illustrations img:nth-last-child(-n+2) {
-    width: 50%;
-    max-height: 166px;
-}
-
-section#tagline {
-    width: 100%;
-    padding: 2rem 15vw;
-    background-color: rgb(75,75,75);
-}
-
-section#tagline p {
-    font-size: 2rem;
-    letter-spacing: 1px;
-    color: white;
-    text-align: center;
-}
-
-main#ad-copy {
-    padding: 4rem 20vw 4rem 40vw;
-    background: white left top / contain no-repeat url("../assets/soldiers-sidebar.png");
-}
-
-main#ad-copy p {
-    font-size: 1.3rem;
-    line-height: 1.7rem;
-    text-align: justify;
-    margin: 1.3rem 0 0;
-}
-
-main#ad-copy p:first-child::first-letter {
-    font-size: 2.6rem;
-    margin-right: 1ch;
-    float: left;
-    padding: 0.8rem 0 0;
+main#primary-content {
+    background: white left top / 12vw repeat-y url("../assets/soldiers-sidebar.png");
+    padding-left: 12vw;
 }
