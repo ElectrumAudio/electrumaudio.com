@@ -1,4 +1,4 @@
 ---
-layout: ../templates/Banner.astro
+layout: ../templates/Tagline.astro
 ---
 discerning audiophile components

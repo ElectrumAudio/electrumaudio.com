@@ -1,48 +1,33 @@
 ---
-import { Image } from 'astro:assets';
-const { frontmatter } = Astro.props;
-const refs = frontmatter.images.map(i => `../assets/${i[0]}`);
-const images = refs.map(r => {
-    return import(r);
-});
-await Promise.all(images);
 ---
 <div class="image-row">
-    <div class="carousel">
-        {images.map( (img, i) => (
-            <Image src={img} alt={refs[i][1]} />
-        ))}
-    </div>
     <slot />
 </div>
 <style is:global>
     main > .image-row {
-        padding-bottom: 3rem;
-        margin-top: 2rem;
-    }
-    main > .image-row p {
-        text-align: center;
-        font-size: 2rem;
-    }
-    .image-row div.carousel {
+        padding: 0 7rem 3rem;
+        margin: 3rem 0;
         justify-content: center;
         align-content: center;
         display: flex;
         flex-wrap: wrap;
-        margin: 0 auto;
-        padding: 0 3vw;
         box-sizing: border-box;
         row-gap: 1rem;
+        width: 100%;
     }
 
-    .image-row div.carousel img {
-        display: block;
-        box-sizing: border-box;
+    .image-row > p {
         width: 20%;
+        height: auto;
         padding: 0;
         margin: 0;
+        line-height: 0;
         flex-basis: auto;
+    }
+
+    .image-row > p > img {
         object-fit: contain;
         max-height: 125px;
+        width: 100%;
     }
 </style>

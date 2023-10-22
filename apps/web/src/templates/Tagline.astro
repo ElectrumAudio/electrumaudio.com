@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+---
+<div class="banner">
+    <slot />
+</div>
+<style is:global>
+    main > .banner {
+        width: 100%;
+        padding: 2rem 7vw;
+        margin: 0 0 2rem;
+        background: linear-gradient(rgba(0,0,0,0.9), rgba(75,75,75,0.9));
+    }
+
+    main > .banner h2 {
+        font-size: 2rem;
+        color: var(--clay);
+        margin-bottom: 0.5rem;
+    }
+
+    main > .banner p {
+        font-size: 1.6rem;
+        color: var(--sand);
+        text-align: center;
+        letter-spacing: 0.5ch;
+    }
+
+</style>

@@ -1,11 +1,16 @@
 ---
 layout: ../templates/ImageRow.astro
-images: 
-- [schematic-01.svg, A schematic detail illustration]
-- [schematic-02.svg, A schematic detail illustration]
-- [schematic-03.svg, A schematic detail illustration]
-- [schematic-04.svg, A schematic detail illustration]
-- [schematic-05.svg, A schematic detail illustration]
-- [schematic-06.svg, A schematic detail illustration]
-- [schematic-07.svg, A schematic detail illustration]
 ---
+![A schematic of an electric component](../assets/schematics/schematic-01.svg)
+
+![A schematic of an electric component](../assets/schematics/schematic-02.svg)
+
+![A schematic of an electric component](../assets/schematics/schematic-03.svg)
+
+![A schematic of an electric component](../assets/schematics/schematic-04.svg)
+
+![A schematic of an electric component](../assets/schematics/schematic-05.svg)
+
+![A schematic of an electric component](../assets/schematics/schematic-06.svg)
+
+![A schematic of an electric component](../assets/schematics/schematic-07.svg)
