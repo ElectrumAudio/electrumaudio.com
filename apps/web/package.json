@@ -8,7 +8,8 @@
         "preview": "astro preview"
     },
     "dependencies": {
-        "astro": "^3.3.1",
-        "electrum-storefront": "workspace:^"
+        "astro": "^3.3.2",
+        "electrum-storefront": "workspace:^",
+        "sharp": "^0.32.6"
     }
 }
