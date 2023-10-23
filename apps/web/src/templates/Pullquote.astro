@@ -1,0 +1,30 @@
+---
+const { frontmatter } = Astro.props;
+---
+<figure class="pullquote">
+    <blockquote><slot /></blockquote>
+    {frontmatter.author &&
+    <figcaption>{frontmatter.author}</figcaption>
+    }
+</figure>
+<style is:global>
+    main > .pullquote {
+        margin: 4rem 20vw;
+        text-align: center;
+    }
+    main > .pullquote p {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        color: var(--sky);
+    }
+    main > .pullquote > figcaption {
+        font-style: italic;
+        font-size: 1.4rem;
+        text-align: right;
+    }
+    main > .pullquote > figcaption::before {
+        content: '—';
+        margin-right: 2px;
+        display: inline-block;
+    }
+</style>

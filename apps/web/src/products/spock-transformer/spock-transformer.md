@@ -1,8 +1,8 @@
 ---
-title: "Spock Transformer"
+layout: ../../templates/TextBlock.astro
 ---
 
-# Spock Transformer
+## Spock Transformer
 
 This Spock Transformer is built for use in Away Team Missions.
 
