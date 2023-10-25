@@ -20,9 +20,25 @@ import { Image } from 'astro:assets';
 
     main > .banner p {
         font-size: 1.6rem;
+        line-height: 1.9rem;
         color: var(--sand);
         text-align: center;
         letter-spacing: 0.5ch;
+    }
+
+    @media (max-width: 716px) {
+        main > .banner {
+            padding: 1rem;
+            margin: 0 0 0.5rem;
+        }
+        main > .banner h2 {
+            font-size: 1.4rem;
+        }
+
+        main > .banner p {
+            font-size: 1.2rem;
+            /* letter-spacing: 0.33ch; */
+        }
     }
 
 </style>

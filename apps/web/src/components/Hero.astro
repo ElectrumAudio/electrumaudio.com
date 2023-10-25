@@ -38,4 +38,27 @@ import logoWhite from '../assets/logo-centered-white-smudge-01.svg';
         object-fit: contain;
         filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.75));
     }
+    @media (max-width: 716px) {
+        section#hero {
+            height: 50vh;
+            grid-template-rows: 2fr 1fr;
+            grid-template-columns: 100%;
+            padding: 5vh 0;
+        }
+        #hero-logo {
+            grid-column: 1;
+            grid-row: 2;
+            display: block;
+            margin: 0 auto;
+            height: 10vh;
+        }
+        #hero-transformer {
+            grid-column: 1;
+            grid-row: 1;
+            display: block;
+            margin: 0 0 5vh;
+            width: auto;
+            height: 25vh;
+        }
+    }
 </style>

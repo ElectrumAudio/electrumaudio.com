@@ -5,7 +5,7 @@
 </footer>
 <style>
     footer {
-        min-height: 15vh;
+        height: 15vh;
         border-top: 1px solid var(--clay);
         background: var(--dark) center / cover no-repeat url('../assets/soldiers-footer.png');
         display: flex;
@@ -17,5 +17,14 @@
         margin: 1rem auto;
         padding: 0;
         color: var(--crimson);
+        filter: drop-shadow(0 0 1rem white);
+    }
+    @media (max-width: 716px) {
+        footer {
+            height: 10vh;
+        }
+        footer p {
+            font-size: 0.6rem;
+        }
     }
 </style>

@@ -17,7 +17,7 @@
     main > .text-block p {
         font-size: 1.3rem;
         line-height: 1.7rem;
-        text-align: justify;
+        /* text-align: justify; */
         margin: 1.3rem 0 0;
     }
 
@@ -45,5 +45,29 @@
         margin: 1.3rem auto;
         border-bottom-right-radius: 1.3rem;
         box-shadow: 4px 4px 4px rgba(75,75,75,0.3);
+    }
+
+    @media (max-width: 716px) {
+        main > .text-block {
+            padding: 1rem 10vw;
+        }
+        main > .text-block h2 {
+            font-size: 1.4rem;
+        }
+        main > .text-block p {
+            font-size: 1rem;
+            line-height: 1.2rem;
+        }
+        main > .text-block p:first-child::first-letter {
+            font-size: 2.2rem;
+            padding-top: 0.6rem; 
+        }
+        main > .text-block img {
+            width: 75%;
+        }
+        main > .text-block li {
+            font-size: 1rem;
+            line-height: 1.2rem;
+        }
     }
 </style>

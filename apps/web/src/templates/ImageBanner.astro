@@ -7,13 +7,6 @@ const imageBannerClass = (frontmatter.position) ? `banner-image-${frontmatter.po
     <slot />
 </div>
 <style is:global>
-    main > .banner-image-left > h2, main > .banner-image-right h2 {
-        font-size: 2rem;
-        color: var(--clay);
-        margin-bottom: 0.5rem;
-        font-family: sans-serif;
-    }
-
     main > .banner-image-left, main > .banner-image-right {
         width: 100%;
         padding: 2rem 12vw;
@@ -23,6 +16,13 @@ const imageBannerClass = (frontmatter.position) ? `banner-image-${frontmatter.po
         grid-template-rows: 2.5rem 1fr;
         grid-template-columns: auto 1fr;
         column-gap: 2.5rem;
+    }
+
+    main > .banner-image-left > h2, main > .banner-image-right h2 {
+        font-size: 2rem;
+        color: var(--clay);
+        margin-bottom: 0.5rem;
+        font-family: sans-serif;
     }
 
     main > .banner-image-left > .banner-text {
@@ -69,7 +69,6 @@ const imageBannerClass = (frontmatter.position) ? `banner-image-${frontmatter.po
         height: auto;
         width: 30vw;
         grid-row: 1 / 3;
-        border: 1px solid var(--clay);
         overflow: hidden;
     }
 
@@ -77,6 +76,7 @@ const imageBannerClass = (frontmatter.position) ? `banner-image-${frontmatter.po
         object-fit: contain;
         width: 100%;
         height: auto;
+        border: 1px solid var(--clay);
     }
 
     main > .banner-image-left > p {
@@ -87,5 +87,38 @@ const imageBannerClass = (frontmatter.position) ? `banner-image-${frontmatter.po
     main > .banner-image-right > p {
         grid-column: 2;
         border-top-right-radius: 1rem;
+    }
+
+    @media (max-width: 716px) {
+        main > .banner-image-left, main > .banner-image-right {
+            padding: 1rem 5vw;
+            display: flex;
+            flex-direction: column;
+        }
+        main > .banner-image-left > h2, main > .banner-image-right h2 {
+            font-size: 1.4rem;
+            margin: 1rem auto 0.5rem;
+            grid-column: unset;
+            grid-row: unset;
+        }
+        main > .banner-image-left > .banner-text, main > .banner-image-right > .banner-text {
+            grid-column: unset;
+            grid-row: unset;
+            padding: 0 5vw;
+        }
+        main > .banner-image-left > .banner-text > p, main > .banner-image-right > .banner-text > p {
+            font-size: 1rem;
+            line-height: 1.2rem;
+            text-align: justify;
+        }
+        main > .banner-image-left > p, main > .banner-image-right > p {
+            grid-column: unset;
+            width: 75vw;
+            height: auto;
+            margin: 1rem auto;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 1rem;
+        }
     }
 </style>
