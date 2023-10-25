@@ -1,6 +1,6 @@
 ---
 layout: ../templates/ImageRow.astro
-mobilecolumns: 1
+mobilecolumns: 2
 ---
 ![A schematic of an electric component](../assets/schematics/schematic-01.svg)
 

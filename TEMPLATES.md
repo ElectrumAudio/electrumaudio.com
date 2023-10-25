@@ -98,11 +98,14 @@ Below the second set of `---` is the Content Area. What you write in that area d
 
     This template is for a row (or more) of images. In the Content Area, add one image in Markdown syntax on each *double-spaced* line.
 
+    In the frontmatter section you may also add the line `mobilecolumns: ` to choose a 1 or 2 column line of images on mobile portrait devices. If you give any other number, or leave the line out, the layout defaults to 2 columns.
+
     For example, the Markdown for the row of illustrations in the tiberius page looks like this:
 
     ```markdown
     ---
     layout: ../templates/ImageRow.astro
+    mobilecolumns: 2
     ---
     ![A schematic of an electric component](../assets/schematics/schematic-01.svg)
 
