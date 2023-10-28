@@ -1,6 +1,6 @@
 ---
 const { frontmatter } = Astro.props;
-const twoColumns = (frontmatter.mobilecolumns === 1) ? false : true;
+const twoColumns = (frontmatter?.mobilecolumns === 1) ? false : true;
 ---
 <div class:list={['image-row', {"two-mobile-columns": twoColumns}]}>
     <slot />

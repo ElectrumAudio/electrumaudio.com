@@ -1,0 +1,25 @@
+---
+import ProductsLayout from '../../layout/ProductsLayout.astro';
+import TextBlock from '../../templates/TextBlock.astro';
+import ImageRow from '../../templates/ImageRow.astro';
+import { getProduct } from 'electrum-storefront';
+const pageTitle = "Electrum Audio | Products | Vulcan Transformer";
+const product = await getProduct({handle: "vulcan-transformer"});
+console.log(product.images);
+---
+<ProductsLayout title={pageTitle}>
+    <!-- {pieces.map(piece => (
+        <piece.Content />
+    ))} -->
+    <TextBlock>
+        <h2>{product.title}</h2>
+        <ul>
+            <li>{product.vendor}</li>
+            <li>{product.availableForSale}</li>
+        </ul>
+        <p>{product.description}</p>
+    </TextBlock>
+    <ImageRow>
+        {product.images.map(image => <p><img src={image.src} width={image.width} height={image.height} alt={image.altText} /></p>)}
+    </ImageRow>
+</ProductsLayout>
